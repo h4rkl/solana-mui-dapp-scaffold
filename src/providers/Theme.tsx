@@ -1,44 +1,50 @@
-import { useContext, useMemo } from 'react'
-import CssBaseline from '@mui/material/CssBaseline'
-import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles'
+import { CssBaseline } from "@mui/material";
+import {
+  ThemeProvider as MuiThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
+import { common, blueGrey, purple, pink, teal, green } from "@mui/material/colors";
+import { useContext, useMemo } from "react";
 
-import { ChosenTheme } from './ChosenTheme'
+import { ChosenTheme } from "./ChosenTheme";
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
-  const { theme } = useContext(ChosenTheme)
-  const muiTheme = useMemo(() => createThemeHelper(theme), [theme])
+  const { theme } = useContext(ChosenTheme);
+  const muiTheme = useMemo(() => createThemeHelper(theme), [theme]);
 
   return (
     <MuiThemeProvider theme={muiTheme}>
       <CssBaseline />
       {children}
     </MuiThemeProvider>
-  )
-}
+  );
+};
 
-const brandColor = '#00b8d4'
-const createThemeHelper = (theme: 'dark' | 'light') => {
-  const isDark = theme === 'dark'
+const createThemeHelper = (theme: "dark" | "light") => {
+  const isDark = theme === "dark";
   return createTheme({
     palette: {
       mode: theme,
       background: {
-        default: isDark ? '#303030;' : '#f0f0f0',
-        paper: isDark ? '#242526' : '#ffffff'
+        default: isDark ? blueGrey[900] : common["white"],
+        paper: isDark ? blueGrey[600] : blueGrey[100],
       },
       primary: {
-        main: brandColor
+        main: purple[700],
+      },
+      secondary: {
+        main: teal[700],
       },
       error: {
-        main: 'rgb(232, 51, 51)'
+        main: pink[500],
       },
       success: {
-        main: 'rgb(76,175,80)'
-      }
-    }
-  })
-}
+        main: green[500],
+      },
+    },
+  });
+};
