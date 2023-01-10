@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Link, Slider, styled } from '@mui/material'
 
-import Header from './components/header'
+import { Header } from './components/Header'
 
 const App: FC = () => {
   return (
