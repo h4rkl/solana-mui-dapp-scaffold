@@ -1,7 +1,7 @@
 // import reportWebVitals from './reportWebVitals';
 import App from './App'
 import ReactDOM from 'react-dom/client';
-import { ChosenThemeProvider, ThemeProvider } from './providers'
+import { ChosenThemeProvider, ThemeProvider } from './contexts'
 import { StrictMode } from 'react'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

@@ -2,7 +2,7 @@ import { FC, useContext } from "react";
 import { FormControlLabel, FormGroup, styled, Switch } from "@mui/material";
 import { blueGrey } from "@mui/material/colors";
 
-import { ChosenTheme } from "../providers";
+import { ChosenTheme } from "../../contexts";
 
 const DarkModeToggle: FC = () => {
   const { theme, setTheme } = useContext(ChosenTheme);

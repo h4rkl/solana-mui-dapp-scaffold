@@ -6,7 +6,7 @@ import {
 import { common, blueGrey, purple, pink, teal, green } from "@mui/material/colors";
 import { useContext, useMemo } from "react";
 
-import { ChosenTheme } from "./ChosenTheme";
+import { ChosenTheme } from "../contexts/ChosenThemeProvider";
 
 interface Props {
   children: React.ReactNode;
