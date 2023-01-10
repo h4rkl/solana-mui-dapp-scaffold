@@ -9,10 +9,7 @@ const App: FC = () => {
       <Header />
       <div>
         <h2>
-          How much do you like{' '}
-          <Link href='https://vitejs.dev/' target='_blank' rel='noopener noreferrer'>
-            Vite?
-          </Link>
+          How much do you like Solana?
         </h2>
         <Slider />
       </div>
