@@ -59,7 +59,7 @@ Dark/Light mode: toggle for dark and light mode
 
 ### Structure
 
-The scaffold project structure may vary based on the front end framework being utilized. The below is an example structure for the Next js Scaffold.
+The below is a best practice example structure for the Solana MUI Scaffold.
 
 ```
 ├── public : publically hosted files
