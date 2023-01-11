@@ -14,7 +14,7 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { Snackbar } from "@mui/material";
 import { WalletAdapterNetwork, WalletError } from "@solana/wallet-adapter-base";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const { autoConnect } = useAutoConnect();
@@ -55,7 +55,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     // TODO: updates needed for updating and referencing endpoint: wallet adapter rework
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} onError={onError} autoConnect={autoConnect}>
-        <WalletModalProvider>{children}</WalletModalProvider>
+        <WalletDialogProvider>{children}</WalletDialogProvider>
         <Snackbar open={!!snackMessage} autoHideDuration={6000} onClose={handleClose} message={snackMessage} />
       </WalletProvider>
     </ConnectionProvider>

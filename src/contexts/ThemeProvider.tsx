@@ -29,7 +29,7 @@ const createThemeHelper = (theme: "dark" | "light") => {
       mode: theme,
       background: {
         default: isDark ? blueGrey[900] : common["white"],
-        paper: isDark ? blueGrey[300] : blueGrey[100],
+        paper: isDark ? blueGrey[600] : blueGrey[100],
       },
       primary: {
         main: purple[700],
@@ -45,6 +45,15 @@ const createThemeHelper = (theme: "dark" | "light") => {
       },
       success: {
         main: green[500],
+      },
+    },
+    components: {
+      MuiListItem: {
+        styleOverrides: {
+          root: {
+            background: isDark ? blueGrey[900] : blueGrey[100],
+          },
+        },
       },
     },
   });
