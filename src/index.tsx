@@ -1,15 +1,18 @@
 // import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import ReactDOM from "react-dom/client";
-import {ChosenThemeProvider, ThemeProvider} from "./contexts";
-import {StrictMode} from "react";
+import { ChosenThemeProvider, ThemeProvider } from "./contexts";
+import { StrictMode } from "react";
+import { WalletContext } from "./contexts";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <StrictMode>
     <ChosenThemeProvider>
       <ThemeProvider>
-        <App />
+        <WalletContext>
+          <App />
+        </WalletContext>
       </ThemeProvider>
     </ChosenThemeProvider>
   </StrictMode>,
