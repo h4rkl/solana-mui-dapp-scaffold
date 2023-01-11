@@ -1,7 +1,8 @@
 {
-  "name": "cmnt",
+  "name": "solana-mui-dapp-starter",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "dependencies": {
     "@caldwell619/react-hooks": "^0.0.10",
     "@craco/craco": "^7.0.0",
