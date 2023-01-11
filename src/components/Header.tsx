@@ -10,7 +10,7 @@ export const Header: FC = () => {
       <Toolbar variant="dense">
         <Container maxWidth="lg" disableGutters={true}>
           <Box display="flex">
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1, alignSelf: "center" }}>
               <DarkModeToggle />
             </Box>
             <Box py={1}>
