@@ -1,7 +1,7 @@
-import {FC, useState} from "react";
-import {Box, Slider, styled} from "@mui/material";
+import { FC, useState } from "react";
+import { Box, Slider, styled } from "@mui/material";
 
-import {Header} from "./components/Header";
+import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 const App: FC = () => {
@@ -13,10 +13,10 @@ const App: FC = () => {
   return (
     <Root>
       <Header />
-      <Box>
+      <Box mt={4}>
         <h2>How much do you like Solana?</h2>
         <Slider aria-label="toly-slide" max={1} value={value} step={0.01} onChange={handleChange} />
-        <Box sx={{opacity: value}} display={"flex"} justifyContent={"center"}>
+        <Box sx={{ opacity: value }} display={"flex"} justifyContent={"center"} height={"60vh"}>
           <img src="toly.jpeg" alt="Toly" />
         </Box>
       </Box>
@@ -35,7 +35,7 @@ const Root = styled("div")`
 
   & a {
     text-decoration: none;
-    color: ${({theme: {palette}}) => palette.primary.main};
+    color: ${({ theme: { palette } }) => palette.primary.main};
   }
 `;
 

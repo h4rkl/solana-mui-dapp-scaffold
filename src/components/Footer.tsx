@@ -14,8 +14,10 @@ export const Footer: FC = () => {
           }}
         >
           <Typography variant="caption" color="initial">
-            Made with ❤️ by <Link href="https://twitter.com/harkl_">harkl</Link> for{" "}
-            <Link href="https://twitter.com/CAW_studio">Caw Studio</Link>
+            Made with ❤️ by{" "}
+            <Link href="https://twitter.com/harkl_" target="_blank">
+              harkl
+            </Link>
           </Typography>
         </Box>
       </Container>
