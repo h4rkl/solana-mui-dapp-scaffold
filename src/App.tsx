@@ -1,23 +1,21 @@
-import { FC } from 'react'
-import { Link, Slider, styled } from '@mui/material'
+import {FC} from "react";
+import {Slider, styled} from "@mui/material";
 
-import { Header } from './components/Header'
+import {Header} from "./components/Header";
 
 const App: FC = () => {
   return (
     <Root>
       <Header />
       <div>
-        <h2>
-          How much do you like Solana?
-        </h2>
+        <h2>How much do you like Solana?</h2>
         <Slider />
       </div>
     </Root>
-  )
-}
+  );
+};
 
-const Root = styled('div')`
+const Root = styled("div")`
   padding: 1% 2% 10vh 2%;
   width: 100%;
   min-height: 95vh;
@@ -27,8 +25,8 @@ const Root = styled('div')`
 
   & a {
     text-decoration: none;
-    color: ${({ theme: { palette } }) => palette.primary.main};
+    color: ${({theme: {palette}}) => palette.primary.main};
   }
-`
+`;
 
-export default App
+export default App;

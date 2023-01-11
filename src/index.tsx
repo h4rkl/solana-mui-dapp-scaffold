@@ -1,10 +1,10 @@
 // import reportWebVitals from './reportWebVitals';
-import App from './App'
-import ReactDOM from 'react-dom/client';
-import { ChosenThemeProvider, ThemeProvider } from './contexts'
-import { StrictMode } from 'react'
+import App from "./App";
+import ReactDOM from "react-dom/client";
+import {ChosenThemeProvider, ThemeProvider} from "./contexts";
+import {StrictMode} from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <StrictMode>
     <ChosenThemeProvider>
