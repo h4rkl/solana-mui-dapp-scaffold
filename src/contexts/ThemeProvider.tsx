@@ -29,13 +29,16 @@ const createThemeHelper = (theme: "dark" | "light") => {
       mode: theme,
       background: {
         default: isDark ? blueGrey[900] : common["white"],
-        paper: isDark ? blueGrey[600] : blueGrey[100],
+        paper: isDark ? blueGrey[300] : blueGrey[100],
       },
       primary: {
         main: purple[700],
       },
       secondary: {
         main: teal[700],
+      },
+      text: {
+        primary: isDark ? common["white"] : common["black"],
       },
       error: {
         main: pink[500],

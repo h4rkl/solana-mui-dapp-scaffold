@@ -5,7 +5,7 @@ import DarkModeToggle from "./DarkModeToggle";
 
 export const Header: FC = () => {
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" enableColorOnDark>
       <Toolbar variant="dense">
         <DarkModeToggle />
       </Toolbar>

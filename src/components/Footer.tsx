@@ -13,7 +13,7 @@ export const Footer: FC = () => {
             m: 2,
           }}
         >
-          <Typography variant="caption" color="initial">
+          <Typography variant="caption">
             Made with ❤️ by{" "}
             <Link href="https://twitter.com/harkl_" target="_blank">
               harkl
