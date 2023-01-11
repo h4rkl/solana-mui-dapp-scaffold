@@ -4,17 +4,20 @@ import ReactDOM from "react-dom/client";
 import { ChosenThemeProvider, ThemeProvider } from "./contexts";
 import { StrictMode } from "react";
 import { WalletContext } from "./contexts";
+import { SnackbarProvider } from "./contexts/SnackbarProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <StrictMode>
-    <ChosenThemeProvider>
-      <ThemeProvider>
-        <WalletContext>
-          <App />
-        </WalletContext>
-      </ThemeProvider>
-    </ChosenThemeProvider>
+    <SnackbarProvider>
+      <ChosenThemeProvider>
+        <ThemeProvider>
+          <WalletContext>
+            <App />
+          </WalletContext>
+        </ThemeProvider>
+      </ChosenThemeProvider>
+    </SnackbarProvider>
   </StrictMode>,
 );
 
