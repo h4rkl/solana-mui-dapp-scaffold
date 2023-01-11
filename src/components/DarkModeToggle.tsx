@@ -1,20 +1,20 @@
-import {FC, useContext} from "react";
-import {FormControlLabel, FormGroup, styled, Switch} from "@mui/material";
-import {blueGrey} from "@mui/material/colors";
+import { FC, useContext } from "react";
+import { FormControlLabel, FormGroup, styled, Switch } from "@mui/material";
+import { blueGrey } from "@mui/material/colors";
 
-import {ChosenTheme} from "../contexts";
+import { ChosenTheme } from "../contexts";
 
 const DarkModeToggle: FC = () => {
-  const {theme, setTheme} = useContext(ChosenTheme);
+  const { theme, setTheme } = useContext(ChosenTheme);
   return (
     <Root>
       <FormGroup>
         <FormControlLabel
           control={
             <MaterialUISwitch
-              sx={{m: 1}}
+              sx={{ m: 1 }}
               checked={theme === "dark"}
-              onChange={({target: {checked}}) => {
+              onChange={({ target: { checked } }) => {
                 const themeToSet = checked ? "dark" : "light";
                 setTheme(themeToSet);
               }}
@@ -27,7 +27,7 @@ const DarkModeToggle: FC = () => {
   );
 };
 
-const MaterialUISwitch = styled(Switch)(({theme}) => ({
+const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,

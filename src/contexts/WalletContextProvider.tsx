@@ -1,8 +1,8 @@
-import {AutoConnectProvider, useAutoConnect} from "./AutoConnectProvider";
-import {clusterApiUrl} from "@solana/web3.js";
-import {ConnectionProvider, WalletProvider} from "@solana/wallet-adapter-react";
-import {FC, ReactNode, useCallback, useEffect, useMemo, useState} from "react";
-import {NetworkConfigurationProvider, useNetworkConfiguration} from "./NetworkConfigurationProvider";
+import { AutoConnectProvider, useAutoConnect } from "./AutoConnectProvider";
+import { clusterApiUrl } from "@solana/web3.js";
+import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
+import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from "react";
+import { NetworkConfigurationProvider, useNetworkConfiguration } from "./NetworkConfigurationProvider";
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
@@ -12,13 +12,13 @@ import {
   // LedgerWalletAdapter,
   // SlopeWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import {Snackbar} from "@mui/material";
-import {WalletAdapterNetwork, WalletError} from "@solana/wallet-adapter-base";
-import {WalletModalProvider} from "@solana/wallet-adapter-react-ui";
+import { Snackbar } from "@mui/material";
+import { WalletAdapterNetwork, WalletError } from "@solana/wallet-adapter-base";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
-const WalletContextProvider: FC<{children: ReactNode}> = ({children}) => {
-  const {autoConnect} = useAutoConnect();
-  const {networkConfiguration} = useNetworkConfiguration();
+const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
+  const { autoConnect } = useAutoConnect();
+  const { networkConfiguration } = useNetworkConfiguration();
   const network = networkConfiguration as WalletAdapterNetwork;
   const [snackMessage, setSnackMessage] = useState<string | null>(null);
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
@@ -33,8 +33,8 @@ const WalletContextProvider: FC<{children: ReactNode}> = ({children}) => {
     () => [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
-      new SolletWalletAdapter({network}),
-      new SolletExtensionWalletAdapter({network}),
+      new SolletWalletAdapter({ network }),
+      new SolletExtensionWalletAdapter({ network }),
       new TorusWalletAdapter(),
       // new LedgerWalletAdapter(),
       // new SlopeWalletAdapter(),
@@ -62,7 +62,7 @@ const WalletContextProvider: FC<{children: ReactNode}> = ({children}) => {
   );
 };
 
-export const WalletContext: FC<{children: ReactNode}> = ({children}) => {
+export const WalletContext: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <NetworkConfigurationProvider>
