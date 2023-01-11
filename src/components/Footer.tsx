@@ -16,7 +16,11 @@ export const Footer: FC = () => {
           <Typography variant="caption">
             Made with ❤️ by{" "}
             <Link href="https://twitter.com/harkl_" target="_blank">
-              harkl
+              harkl_
+            </Link>{" "}
+            for{" "}
+            <Link href="https://twitter.com/CAW_studio" target="_blank">
+              CAW Studio
             </Link>
           </Typography>
         </Box>
