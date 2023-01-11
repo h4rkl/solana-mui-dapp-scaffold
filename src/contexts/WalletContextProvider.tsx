@@ -1,7 +1,7 @@
 import { AutoConnectProvider, useAutoConnect } from "./AutoConnectProvider";
 import { clusterApiUrl } from "@solana/web3.js";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
-import { FC, ReactNode, useCallback, useEffect, useMemo } from "react";
+import { FC, ReactNode, useCallback, useMemo } from "react";
 import { NetworkConfigurationProvider, useNetworkConfiguration } from "./NetworkConfigurationProvider";
 import { useSnackbar } from "./SnackbarProvider";
 import {
