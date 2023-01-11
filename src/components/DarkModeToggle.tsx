@@ -20,7 +20,7 @@ const DarkModeToggle: FC = () => {
               }}
             />
           }
-          label='Solana MUI dApp Starter'
+          label="Solana MUI dApp Starter"
         />
       </FormGroup>
     </Root>
