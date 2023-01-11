@@ -1,6 +1,6 @@
 # Solana MUI dApp Scaffold
 
-Welcome to the Solana MUi Dapp Scaffold brougght to you by CAW Studios! This is a React.js project that has been bootstrapped with create-react-app and it is built to be compatible with Solana wallets and wallet adapters. Keep in mind, however, that depending on the plugin and wallet compatibility, the responsive version for wallets and wallet adapter may not function or work as expected for mobile.
+Welcome to the Solana MUI Dapp Scaffold brought to you by CAW Studios! This is a React.js project that has been bootstrapped with create-react-app and it is built to be compatible with Solana wallets and wallet adapters. Keep in mind, however, that depending on the plugin and wallet compatibility, the responsive version for wallets and wallet adapter may not function or work as expected for mobile.
 
 This scaffold project comes with a variety of features, including wallet integration with auto connect/refresh, state management, clean and simple styling, universal notifications through MUI Snackbar, and a toggle for dark/light mode. The structure of the project may vary based on the frontend framework being used, but it is generally set up in a way that makes it easy to find and reuse code.
 
